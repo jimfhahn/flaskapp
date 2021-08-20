@@ -7,6 +7,4 @@ EXPOSE 5000
 
 WORKDIR src
 
-COPY src src/
-
 ENTRYPOINT ["python", "python src/reconcile.py --debug"]

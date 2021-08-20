@@ -1,12 +1,8 @@
 # python:alpine is 3.{latest}
 FROM python:alpine 
 
-RUN pip install flask
-
-COPY src /src/
-
-RUN pip install pip install -r requirements.txt
+RUN pip install flask fuzzywuzzy html5lib isodate itsdangerous Jinja2 MarkupSafe pyparsing python-Levenshtein rdflib requests six SPARQLWrapper Werkzeug wheel
 
 EXPOSE 5000
 
-ENTRYPOINT ["python", "python src/reconcile.py --debug"]
+ENTRYPOINT ["python", "python reconcile.py --debug"]

@@ -5,4 +5,6 @@ RUN pip install flask fuzzywuzzy html5lib isodate itsdangerous Jinja2 MarkupSafe
 
 EXPOSE 5000
 
-ENTRYPOINT ["python", "python reconcile.py --debug"]
+COPY src/ src/
+
+ENTRYPOINT ["python", "python src/reconcile.py --debug"]

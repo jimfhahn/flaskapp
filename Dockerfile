@@ -1,12 +1,8 @@
 # python:alpine is 3.{latest}
 FROM python:alpine 
 
-LABEL maintainer="Jeeva S. Chelladhurai"
-
-RUN pip install flask
-
-COPY src /src/
+RUN pip install pip install -r requirements.txt
 
 EXPOSE 5000
 
-ENTRYPOINT ["python", "/src/app.py"]
+ENTRYPOINT ["python", "python reconcile.py --debug"]
